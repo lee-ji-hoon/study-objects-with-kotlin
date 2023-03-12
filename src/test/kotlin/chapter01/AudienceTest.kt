@@ -30,8 +30,8 @@ class AudienceTest {
         // when
         theater.enter(audience)
         // then
-        assertEquals(audience.bag.amount, audienceInitAmount - ticket.fee)
-        assertTrue(audience.bag.hasTicket)
+        assertEquals(bag.amount, audienceInitAmount - ticket.fee)
+        assertTrue(bag.hasTicket)
     }
 
     @Test
@@ -44,8 +44,8 @@ class AudienceTest {
         // when
         theater.enter(audience)
         // then
-        assertEquals(audience.bag.amount, audienceInitAmount)
-        assertTrue(audience.bag.hasTicket)
+        assertEquals(bag.amount, audienceInitAmount)
+        assertTrue(bag.hasTicket)
     }
 
     companion object {
