@@ -27,9 +27,19 @@ data class TicketSeller(
      * 이렇게 함으로써 Bag의 내부 구현이 변경이 되더라도 TicketSeller는 아무런 영향을 받지 않는다.
      * @param audience 관람객
      */
-    fun sellTo(audience: Audience) {
+    /*
+    fun sellToLegacy(audience: Audience) {
         val ticket = ticketOffice.getTicket()
         val amount = audience.buy(ticket)
         ticketOffice.plusAmount(amount)
+    }
+    */
+
+    /**
+     * TicketOffice 에게도 자율적으로 책임을 질 수 있게 변경
+     * @param audience 관람객
+     */
+    fun sellTo(audience: Audience) {
+        ticketOffice.sellTicketTo(audience)
     }
 }
