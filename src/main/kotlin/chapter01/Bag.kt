@@ -12,12 +12,10 @@ data class Bag(
     var invitation: Invitation? = null,
     var ticket: Ticket? = null,
 ) {
-    val hasInvitation = invitation != null
-    val hasTicket = ticket != null
-
-    fun setTicket(ticket: Ticket) {
-        this.ticket = ticket
-    }
+    val hasInvitation: Boolean
+        get() = invitation != null
+    val hasTicket: Boolean
+        get() = ticket != null
 
     fun minusAmount(amount: Long) {
         this.amount -= amount

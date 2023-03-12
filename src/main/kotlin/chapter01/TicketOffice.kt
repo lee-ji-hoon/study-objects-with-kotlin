@@ -8,7 +8,7 @@ package chapter01
  */
 data class TicketOffice(
     private var amount: Long,
-    private var tickets: ArrayList<Ticket> = arrayListOf()
+    private var tickets: MutableList<Ticket> = mutableListOf()
 ) {
 
     fun getTicket(): Ticket {

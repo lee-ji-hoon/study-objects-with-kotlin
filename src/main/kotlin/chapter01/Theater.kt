@@ -12,6 +12,6 @@ class Theater(
             audience.bag.minusAmount(ticket.fee)
             ticketSeller.ticketOffice.plusAmount(ticket.fee)
         }
-        audience.bag.setTicket(ticket)
+        audience.bag.ticket = ticket
     }
 }
