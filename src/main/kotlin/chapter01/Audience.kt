@@ -17,7 +17,8 @@ data class Audience(
      * @param ticket 티켓
      * @return 관람객이 현장에서 지불할 금액
      */
-    fun buy(ticket: Ticket): Long {
+    /*
+    fun buyLegacy(ticket: Ticket): Long {
         bag.ticket = ticket
 
         return if (bag.hasInvitation.not()) {
@@ -26,5 +27,15 @@ data class Audience(
         } else {
             0
         }
+    }
+    */
+
+    /**
+     * Bag에게도 능동적으로 일을 할 책임을 주기 위해서 리팩토링
+     * @param ticket 티켓
+     * @return 관람객이 현장에서 지불할 금액
+     */
+    fun buy(ticket: Ticket): Long {
+        return bag.hold(ticket)
     }
 }

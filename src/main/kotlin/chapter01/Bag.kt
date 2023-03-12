@@ -8,20 +8,35 @@ package chapter01
  * @property ticket : 티켓
  */
 data class Bag(
-    var amount: Long,
-    var invitation: Invitation? = null,
-    var ticket: Ticket? = null,
+    private var amount: Long,
+    private var invitation: Invitation? = null,
+    private var ticket: Ticket? = null,
 ) {
-    val hasInvitation: Boolean
+    private val hasInvitation: Boolean
         get() = invitation != null
     val hasTicket: Boolean
         get() = ticket != null
 
-    fun minusAmount(amount: Long) {
+    fun hold(ticket: Ticket): Long {
+        this.ticket = ticket
+
+        return if (hasInvitation.not()) {
+            minusAmount(ticket.fee)
+            ticket.fee
+        } else {
+            0
+        }
+    }
+
+    fun getAmount(): Long {
+        return amount
+    }
+
+    private fun minusAmount(amount: Long) {
         this.amount -= amount
     }
 
-    fun plusAmount(amount: Long) {
+    private fun plusAmount(amount: Long) {
         this.amount += amount
     }
 }

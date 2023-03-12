@@ -30,7 +30,7 @@ class AudienceTest {
         // when
         theater.enter(audience)
         // then
-        assertEquals(bag.amount, audienceInitAmount - ticket.fee)
+        assertEquals(bag.getAmount(), audienceInitAmount - ticket.fee)
         assertTrue(bag.hasTicket)
     }
 
@@ -44,7 +44,7 @@ class AudienceTest {
         // when
         theater.enter(audience)
         // then
-        assertEquals(bag.amount, audienceInitAmount)
+        assertEquals(bag.getAmount(), audienceInitAmount)
         assertTrue(bag.hasTicket)
     }
 
