@@ -13,7 +13,8 @@ class Theater(
      * 현실에서는 관람객이 직접 자신의 가방에서 초대장을 꺼내 판매원에게 건내고, 판매원은 매표소에 있는 티켓을 직접 꺼내서 관람객에게 건내고 돈을 받아 매표소에 보관한다.
      * @param audience 관람객
      */
-    fun enter(audience: Audience) {
+    /*
+    fun enterLegacy(audience: Audience) {
         val ticket = ticketSeller.ticketOffice.getTicket()
 
         // 티켓이 없다면 방문객의 지갑에서 티켓 요금만큼 사용
@@ -22,5 +23,14 @@ class Theater(
             ticketSeller.ticketOffice.plusAmount(ticket.fee)
         }
         audience.bag.ticket = ticket
+    }
+    */
+
+    /**
+     * 소극장(Theater)는 판매자(TicketSeller) 관람객(Audience)가 무슨 일을 하는지 내부적으로 알 필요가 없기에 요청만 하면 된다.
+     * @param audience 관람객
+     */
+    fun enter(audience: Audience) {
+        ticketSeller.sellTo(audience)
     }
 }
