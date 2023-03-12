@@ -25,8 +25,8 @@
 
 ## 참여 인원
 
-|[김명석](https://github.com/audxo112)|[이지훈](https://github.com/lee-ji-hoon)|[이동훈](https://github.com/ldh019)|
-|---|---|---|
+|[김명석](https://github.com/audxo112)|[이지훈](https://github.com/lee-ji-hoon)|[양수진](https://github.com/yangsooplus)|[이동훈](https://github.com/ldh019)|
+|---|---|---|---|
 
 ## 정리
 
