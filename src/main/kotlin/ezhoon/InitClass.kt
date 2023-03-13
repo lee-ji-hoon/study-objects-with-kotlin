@@ -1,0 +1,4 @@
+package ezhoon
+
+class InitClass {
+}

@@ -1,0 +1,4 @@
+package hoondong
+
+class InitClass {
+}

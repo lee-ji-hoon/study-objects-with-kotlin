@@ -1,0 +1,4 @@
+package yangsooplus
+
+class InitClass {
+}
