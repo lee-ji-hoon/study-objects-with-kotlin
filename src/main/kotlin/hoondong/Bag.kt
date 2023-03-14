@@ -1,8 +1,8 @@
 package hoondong
 
-class Bag {
-    private var amount: Long = 0L
-    private var invitation: Invitation? = null
+class Bag(private var invitation: Invitation? = null) {
+    var amount: Long = 0L
+    private set
     private var ticket: Ticket? = null
 
     fun hasInvitation() = invitation != null

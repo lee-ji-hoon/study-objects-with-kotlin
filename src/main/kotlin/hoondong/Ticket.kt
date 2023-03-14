@@ -1,6 +1,3 @@
 package hoondong
 
-class Ticket {
-    var fee: Long = 0L
-        private set
-}
+class Ticket(val fee: Long = 0L)
