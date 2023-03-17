@@ -1,5 +1,10 @@
 package yangsooplus.ch01
 
 data class TicketSeller(
-    val ticketOffice: TicketOffice
-)
+    private val ticketOffice: TicketOffice
+) {
+
+    fun sellTo(audience: Audience) {
+        ticketOffice.plusAmount(audience.buy(ticketOffice.getTicket()))
+    }
+}
