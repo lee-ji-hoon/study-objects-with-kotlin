@@ -14,13 +14,22 @@ data class Bag(
         this.ticket = ticket
     }
 
+    fun hold(ticket: Ticket): Long {
+        this.ticket = ticket
+        return if (hasInvitation()) {
+            0L
+        } else {
+            minusAmount(ticket.fee)
+            ticket.fee
+        }
+    }
 
-    fun hasInvitation() = invitation != null
+    private fun hasInvitation() = invitation != null
 
     fun hasTicket() = ticket != null
 
 
-    fun minusAmount(amount: Long) {
+    private fun minusAmount(amount: Long) {
         this.amount -= amount
     }
 
