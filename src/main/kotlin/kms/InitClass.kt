@@ -1,4 +1,0 @@
-package kms
-
-class InitClass {
-}
