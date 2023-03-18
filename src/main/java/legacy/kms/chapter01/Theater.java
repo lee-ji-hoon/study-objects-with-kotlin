@@ -1,6 +1,6 @@
 package legacy.kms.chapter01;
 
-public class Theater {
+class Theater {
 
     private final TicketSeller ticketSeller;
 
