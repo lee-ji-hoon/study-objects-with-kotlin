@@ -8,7 +8,19 @@ public class Audience {
         this.bag = bag;
     }
 
-    public Bag getBag() {
-        return bag;
+    public boolean hasInvitation() {
+        return bag.hasInvitation();
+    }
+
+    public void setTicket(Ticket ticket) {
+        bag.setTicket(ticket);
+    }
+
+    public void plusAmount(Long amount) {
+        bag.plusAmount(amount);
+    }
+
+    public void minusAmount(Long amount) {
+        bag.minusAmount(amount);
     }
 }

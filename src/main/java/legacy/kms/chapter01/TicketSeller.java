@@ -2,13 +2,21 @@ package legacy.kms.chapter01;
 
 public class TicketSeller {
 
-    private TicketOffice ticketOffice;
+    private final TicketOffice ticketOffice;
 
     public TicketSeller(TicketOffice ticketOffice) {
         this.ticketOffice = ticketOffice;
     }
 
-    public TicketOffice getTicketOffice() {
-        return ticketOffice;
+    public Ticket getTicket(){
+        return ticketOffice.getTicket();
+    }
+
+    public void plusAmount(Long amount){
+        ticketOffice.plusAmount(amount);
+    }
+
+    public void minusAmount(Long amount){
+        ticketOffice.minusAmount(amount);
     }
 }
