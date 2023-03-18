@@ -8,19 +8,13 @@ public class Audience {
         this.bag = bag;
     }
 
-    public boolean hasInvitation() {
-        return bag.hasInvitation();
-    }
-
-    public void setTicket(Ticket ticket) {
-        bag.setTicket(ticket);
-    }
-
-    public void plusAmount(Long amount) {
-        bag.plusAmount(amount);
-    }
-
-    public void minusAmount(Long amount) {
-        bag.minusAmount(amount);
+    public long buy(Ticket ticket) {
+        if(bag.hasInvitation()){
+            bag.setTicket(ticket);
+            return 0L;
+        } else{
+            bag.minusAmount(ticket.getFee());
+            return ticket.getFee();
+        }
     }
 }
