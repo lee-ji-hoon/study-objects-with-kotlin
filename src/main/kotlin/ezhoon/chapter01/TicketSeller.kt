@@ -1,4 +1,4 @@
-package chapter01
+package ezhoon.chapter01
 
 data class TicketSeller(
     private val ticketOffice: TicketOffice

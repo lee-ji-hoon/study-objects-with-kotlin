@@ -1,4 +1,4 @@
-package chapter01
+package ezhoon.chapter01
 
 class Theater(
     private val ticketSeller: TicketSeller

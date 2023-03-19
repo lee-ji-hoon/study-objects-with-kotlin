@@ -1,4 +1,4 @@
-package chapter01
+package ezhoon.chapter01
 
 /**
  * 관람객이 소지품을 보관할 클래스

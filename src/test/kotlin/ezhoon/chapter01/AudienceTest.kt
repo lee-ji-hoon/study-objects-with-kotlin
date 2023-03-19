@@ -1,5 +1,6 @@
-package chapter01
+package ezhoon.chapter01
 
+import ezhoon.chapter01.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test

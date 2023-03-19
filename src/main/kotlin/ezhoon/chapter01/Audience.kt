@@ -1,4 +1,4 @@
-package chapter01
+package ezhoon.chapter01
 
 /**
  * 관람객 클래스
