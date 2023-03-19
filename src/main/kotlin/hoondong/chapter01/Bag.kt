@@ -1,4 +1,4 @@
-package hoondong
+package hoondong.chapter01
 
 class Bag(private var invitation: Invitation? = null) {
     var amount: Long = 0L
