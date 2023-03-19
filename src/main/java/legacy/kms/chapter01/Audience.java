@@ -1,6 +1,6 @@
 package legacy.kms.chapter01;
 
-public class Audience {
+class Audience {
 
     private final Bag bag;
 

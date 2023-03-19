@@ -1,6 +1,6 @@
 package legacy.kms.chapter01;
 
-public class TicketSeller {
+class TicketSeller {
 
     private final TicketOffice ticketOffice;
 

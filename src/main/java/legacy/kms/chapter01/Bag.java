@@ -1,6 +1,6 @@
 package legacy.kms.chapter01;
 
-public class Bag {
+class Bag {
 
     private Long amount;
     private Invitation invitation;

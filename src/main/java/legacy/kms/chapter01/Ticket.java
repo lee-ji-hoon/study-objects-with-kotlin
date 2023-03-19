@@ -1,6 +1,6 @@
 package legacy.kms.chapter01;
 
-public class Ticket {
+class Ticket {
 
     private Long fee;
 

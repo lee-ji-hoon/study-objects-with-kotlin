@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class TicketOffice {
+class TicketOffice {
 
     private Long amount;
     private final List<Ticket> tickets = new ArrayList<>();
