@@ -1,0 +1,14 @@
+name: Assign PR opener
+on:
+  pull_request:
+    branches: [ main ]
+    types: [ opened ]
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign PR opener
+        uses: peter-evans/create-pull-request@v4
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          assignees: ${{ github.event.pull_request.user.login }}
