@@ -2,10 +2,7 @@ package hoondong.chapter02
 
 import java.math.BigDecimal
 
-class Money(private var amount: BigDecimal) {
-    fun wons(amount: Long): Money {
-        return Money(BigDecimal.valueOf(amount))
-    }
+data class Money(val amount: BigDecimal) {
 
     fun plus(amount: Money): Money {
         return Money(this.amount + amount.amount)
@@ -29,5 +26,8 @@ class Money(private var amount: BigDecimal) {
 
     companion object {
         val ZERO: Money = Money(BigDecimal.ZERO)
+        fun wons(amount: Long): Money {
+            return Money(BigDecimal.valueOf(amount))
+        }
     }
 }

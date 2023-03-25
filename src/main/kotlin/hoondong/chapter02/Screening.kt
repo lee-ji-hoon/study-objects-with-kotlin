@@ -24,6 +24,6 @@ class Screening(
     }
 
     private fun calculateFee(audienceCount: Int): Money {
-        return movie.calculateMovieFee(this).times(audienceCount)
+        return movie.calculateMovieFee(this).times(audienceCount.toDouble())
     }
 }
