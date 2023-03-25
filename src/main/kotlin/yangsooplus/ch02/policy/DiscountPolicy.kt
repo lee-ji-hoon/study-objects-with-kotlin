@@ -12,10 +12,10 @@ abstract class DiscountPolicy(
         if (conditions.isEmpty()) return Money.ZERO
 
         for (c in conditions) {
-            if (c.isSatisfiedBy(screening).not()) return Money.ZERO
+            if (c.isSatisfiedBy(screening)) return getDiscountAmount(screening)
         }
 
-        return getDiscountAmount(screening)
+        return Money.ZERO
     }
 
     protected abstract fun getDiscountAmount(screening: Screening): Money
