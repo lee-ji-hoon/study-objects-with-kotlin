@@ -1,5 +1,6 @@
 package yangsooplus.ch02
 
+import yangsooplus.ch02.policy.DiscountPolicy
 import java.time.Duration
 
 data class Movie(
