@@ -1,5 +1,7 @@
 package hoondong.chapter02
 
+import hoondong.chapter02.policy.DiscountPolicy
+import hoondong.chapter02.policy.NoneDiscountPolicy
 import java.time.Duration
 
 class Movie(

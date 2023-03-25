@@ -1,4 +1,8 @@
-package hoondong.chapter02
+package hoondong.chapter02.policy
+
+import hoondong.chapter02.condition.DiscountCondition
+import hoondong.chapter02.Money
+import hoondong.chapter02.Screening
 
 class PercentDiscountPolicy (
     private val percent: Double,

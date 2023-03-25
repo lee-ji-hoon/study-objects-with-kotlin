@@ -1,6 +1,10 @@
 package hoondong
 
 import hoondong.chapter02.*
+import hoondong.chapter02.condition.PeriodCondition
+import hoondong.chapter02.condition.SequenceCondition
+import hoondong.chapter02.policy.AmountDiscountPolicy
+import hoondong.chapter02.policy.PercentDiscountPolicy
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
