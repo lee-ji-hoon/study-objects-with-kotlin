@@ -28,11 +28,11 @@
 
 | 장   | 제목                                  | 날짜 | 링크 |
 | ---- | ------------------------------------- | ---- | ---- |
-| 제1장 | 객체, 설계                           |  3/19 | [Issues #1](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/1) |
-| 제2장 | 객체지향 프로그래밍                 |      |      |
-| 제3장 | 역할, 책임, 협력                    |      |      |
-| 제4장 | 설계 품질과 트레이드오프             |      |      |
-| 제5장 | 책임 할당하기                        |      |      |
+| 제1장 | 객체, 설계                       |  3/19 | [Issues #1](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/1) |
+| 제2장 | 객체지향 프로그래밍                 |  3/26 | [Issues #6](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/1) |
+| 제3장 | 역할, 책임, 협력                  |       |      |
+| 제4장 | 설계 품질과 트레이드오프             |       |      |
+| 제5장 | 책임 할당하기                      |      |      |
 | 제6장 | 메시지와 인터페이스                 |      |      |
 | 제7장 | 객체 분해                            |      |      |
 | 제8장 | 의존성 관리하기                      |      |      |
