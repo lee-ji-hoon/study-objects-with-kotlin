@@ -7,9 +7,13 @@ data class Movie(
     val title: String,
     val runningTime: Duration,
     val fee: Money,
-    val discountPolicy: DiscountPolicy
+    var discountPolicy: DiscountPolicy
 ) {
     fun calculateMovieFee(screening: Screening): Money{
         return fee.minus(discountPolicy.calculateDiscountAmount(screening))
+    }
+
+    fun changeDiscountPolicy(discountPolicy: DiscountPolicy) {
+        this.discountPolicy = discountPolicy
     }
 }

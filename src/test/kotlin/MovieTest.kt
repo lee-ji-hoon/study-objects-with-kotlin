@@ -79,7 +79,7 @@ class MovieTest {
             "스타워즈",
             Duration.ofMinutes(210),
             Money.Companion.wons(10000),
-            NoneDiscountPolicy(emptyList())
+            NoneDiscountPolicy()
         )
         val screening = Screening(startWars, 2, LocalDateTime.now())
         val customer = Customer("양수진")
@@ -90,4 +90,47 @@ class MovieTest {
         // then
         assertEquals(BigDecimal(10000), reservation.fee.amount)
     }
+
+    @Test
+    fun changeDiscountPolicyTest() {
+        // given
+        val amountDiscountPolicy = AmountDiscountPolicy(
+            discountAmount = Money.Companion.wons(800),
+            conditions = listOf(
+                SequenceCondition(1),
+                SequenceCondition(10),
+                PeriodCondition(DayOfWeek.MONDAY, LocalTime.of(10, 0), LocalTime.of(11, 59)),
+                PeriodCondition(DayOfWeek.TUESDAY, LocalTime.of(10, 0), LocalTime.of(20, 59)),
+            )
+        )
+        val percentDiscountPolicy = PercentDiscountPolicy(
+            percent = 0.1,
+            conditions = listOf(
+                PeriodCondition(DayOfWeek.TUESDAY, LocalTime.of(14, 0), LocalTime.of(16, 59)),
+                SequenceCondition(1),
+                PeriodCondition(DayOfWeek.THURSDAY, LocalTime.of(10, 0), LocalTime.of(13, 59))
+            )
+        )
+
+        val avatar = Movie(
+            "아바타",
+            Duration.ofMinutes(120),
+            Money.Companion.wons(10000),
+            amountDiscountPolicy
+        )
+        val screening = Screening(avatar, 1, LocalDateTime.now())
+        val customer = Customer("양수진")
+
+        val reservation = screening.reserve(customer, 1)
+        assertEquals(BigDecimal(9200), reservation.fee.amount)
+
+        // when
+        avatar.changeDiscountPolicy(percentDiscountPolicy)
+        val changedReservation = screening.reserve(customer, 1)
+
+        // then
+        assertEquals(BigDecimal(9000), changedReservation.fee.amount)
+
+    }
+
 }
