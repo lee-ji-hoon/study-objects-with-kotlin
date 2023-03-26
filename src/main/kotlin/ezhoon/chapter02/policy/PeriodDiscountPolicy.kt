@@ -1,4 +1,8 @@
-package ezhoon.chapter02
+package ezhoon.chapter02.policy
+
+import ezhoon.chapter02.Money
+import ezhoon.chapter02.Screening
+import ezhoon.chapter02.condition.DiscountCondition
 
 class PeriodDiscountPolicy(
     private val percent: Double,

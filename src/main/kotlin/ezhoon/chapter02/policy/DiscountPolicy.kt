@@ -1,4 +1,8 @@
-package ezhoon.chapter02
+package ezhoon.chapter02.policy
+
+import ezhoon.chapter02.Money
+import ezhoon.chapter02.Screening
+import ezhoon.chapter02.condition.DiscountCondition
 
 /**
  * 할인 정책은 다양하게 존재한다.

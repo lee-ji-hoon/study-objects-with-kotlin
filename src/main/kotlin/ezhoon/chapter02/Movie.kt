@@ -1,6 +1,6 @@
 package ezhoon.chapter02
 
-import java.math.BigDecimal
+import ezhoon.chapter02.policy.DiscountPolicy
 import java.time.Duration
 
 data class Movie(

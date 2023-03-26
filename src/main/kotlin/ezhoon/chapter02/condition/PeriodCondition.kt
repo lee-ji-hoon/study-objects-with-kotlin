@@ -1,5 +1,6 @@
-package ezhoon.chapter02
+package ezhoon.chapter02.condition
 
+import ezhoon.chapter02.Screening
 import java.time.DayOfWeek
 import java.time.LocalTime
 
