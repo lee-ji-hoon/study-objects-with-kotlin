@@ -7,7 +7,7 @@ import yangsooplus.ch02.condition.DiscountCondition
 class AmountDiscountPolicy(
     private val discountAmount: Money,
     private val conditions: List<DiscountCondition>
-): DiscountPolicy(conditions) {
+): DefaultDiscountPolicy(conditions) {
 
     override fun getDiscountAmount(screening: Screening): Money {
         return discountAmount
