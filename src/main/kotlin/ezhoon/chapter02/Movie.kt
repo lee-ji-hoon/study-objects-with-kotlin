@@ -1,11 +1,17 @@
 package ezhoon.chapter02
 
 import java.math.BigDecimal
+import java.time.Duration
 
 data class Movie(
-    val fee: Int
+    private val fee: Money,
+    private val runningTime: Duration,
+    private val title: String,
+    private val discountPolicy: DiscountPolicy
 ) {
     fun calculateMovieFee(screening: Screening): Money {
-        return Money(BigDecimal(10).plus(BigDecimal(screening.getMovieFee())))
+        return fee.minus(discountPolicy.calculateDiscountAmount(screening))
     }
+
+    fun getFee() = fee
 }
