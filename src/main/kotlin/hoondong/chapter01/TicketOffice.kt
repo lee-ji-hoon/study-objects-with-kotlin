@@ -1,4 +1,4 @@
-package hoondong
+package hoondong.chapter01
 
 class TicketOffice(private var amount: Long, vararg tickets: Ticket) {
     private val tickets: MutableList<Ticket> = mutableListOf()
