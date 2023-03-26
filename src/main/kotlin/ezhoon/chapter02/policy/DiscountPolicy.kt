@@ -13,7 +13,7 @@ import ezhoon.chapter02.condition.DiscountCondition
  */
 interface DiscountPolicy {
 
-    val conditions: ArrayList<DiscountCondition>
+    val conditions: List<DiscountCondition>
 
     fun calculateDiscountAmount(screening: Screening): Money
 

@@ -6,7 +6,7 @@ import ezhoon.chapter02.condition.DiscountCondition
 
 class AmountDiscountPolicy(
     private val discountAmount: Money,
-    override val conditions: ArrayList<DiscountCondition>
+    override val conditions: List<DiscountCondition>
 ) : DiscountPolicy {
 
     override fun calculateDiscountAmount(screening: Screening): Money {

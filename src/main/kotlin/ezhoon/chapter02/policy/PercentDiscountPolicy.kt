@@ -4,9 +4,9 @@ import ezhoon.chapter02.Money
 import ezhoon.chapter02.Screening
 import ezhoon.chapter02.condition.DiscountCondition
 
-class PeriodDiscountPolicy(
+class PercentDiscountPolicy(
     private val percent: Double,
-    override val conditions: ArrayList<DiscountCondition>
+    override val conditions: List<DiscountCondition>
 ) : DiscountPolicy {
 
     override fun calculateDiscountAmount(screening: Screening): Money {

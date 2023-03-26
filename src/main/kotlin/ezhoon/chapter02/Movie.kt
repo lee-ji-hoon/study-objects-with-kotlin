@@ -5,9 +5,9 @@ import ezhoon.chapter02.policy.NoneDiscountPolicy
 import java.time.Duration
 
 data class Movie(
-    private val fee: Money,
-    private val runningTime: Duration,
     private val title: String,
+    private val runningTime: Duration,
+    private val fee: Money,
     private var discountPolicy: DiscountPolicy
 ) {
     fun calculateMovieFee(screening: Screening): Money {

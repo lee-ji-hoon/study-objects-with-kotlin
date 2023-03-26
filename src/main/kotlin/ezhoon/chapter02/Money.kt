@@ -7,7 +7,7 @@ import java.math.BigDecimal
  * - double도 소수점을 표현하지만 정밀도에 있어 한계가 있어 값 유실이 존재한다.
  * - 돈과 소수점을 다룬다면 BigDecimal은 필수적이고 단점으로는 느린 속도와 기본 타입보다 조금 불편한 사용이다.
  */
-class Money(
+data class Money(
     private val amount: BigDecimal
 ) {
     fun plus(other: Money): Money {
