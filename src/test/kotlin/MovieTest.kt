@@ -5,6 +5,7 @@ import yangsooplus.ch02.Screening
 import yangsooplus.ch02.condition.PeriodCondition
 import yangsooplus.ch02.condition.SequenceCondition
 import yangsooplus.ch02.policy.AmountDiscountPolicy
+import yangsooplus.ch02.policy.NoneDiscountPolicy
 import yangsooplus.ch02.policy.PercentDiscountPolicy
 import java.math.BigDecimal
 import java.time.DayOfWeek
@@ -70,5 +71,23 @@ class MovieTest {
 
         // then
         assertEquals(BigDecimal(9900.0), reservation.fee.amount)
+    }
+
+    @Test
+    fun noneDiscountTest() {
+        val startWars = Movie(
+            "스타워즈",
+            Duration.ofMinutes(210),
+            Money.Companion.wons(10000),
+            NoneDiscountPolicy(emptyList())
+        )
+        val screening = Screening(startWars, 2, LocalDateTime.now())
+        val customer = Customer("양수진")
+
+        // when
+        val reservation = screening.reserve(customer, 1)
+
+        // then
+        assertEquals(BigDecimal(10000), reservation.fee.amount)
     }
 }
