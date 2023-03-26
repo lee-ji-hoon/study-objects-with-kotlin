@@ -4,6 +4,7 @@ import ezhoon.chapter02.Money
 import ezhoon.chapter02.Screening
 import ezhoon.chapter02.condition.DiscountCondition
 
+
 /**
  * 할인 정책은 다양하게 존재한다.
  * 1. 비율 할인
@@ -13,6 +14,7 @@ import ezhoon.chapter02.condition.DiscountCondition
 interface DiscountPolicy {
 
     val conditions: ArrayList<DiscountCondition>
+
     fun calculateDiscountAmount(screening: Screening): Money
 
     fun getDiscountAmount(screening: Screening): Money

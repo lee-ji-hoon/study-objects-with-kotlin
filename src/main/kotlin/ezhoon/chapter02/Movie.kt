@@ -10,6 +10,8 @@ data class Movie(
     private val discountPolicy: DiscountPolicy
 ) {
     fun calculateMovieFee(screening: Screening): Money {
+        if (discountPolicy == null) return fee
+
         return fee.minus(discountPolicy.calculateDiscountAmount(screening))
     }
 

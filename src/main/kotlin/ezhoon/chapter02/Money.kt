@@ -27,7 +27,7 @@ class Money(
     fun isGreaterThan(other: Money) = amount >= other.amount
 
     companion object {
-        val ZERO = Money.getWons(0)
+        val ZERO = getWons(0)
 
         fun getWons(amount: Long): Money {
             return Money(BigDecimal.valueOf(amount))
