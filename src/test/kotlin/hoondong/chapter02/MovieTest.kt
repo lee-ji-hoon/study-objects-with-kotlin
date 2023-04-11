@@ -1,4 +1,4 @@
-package hoondong
+package hoondong.chapter02
 
 import hoondong.chapter02.*
 import hoondong.chapter02.condition.PeriodCondition
