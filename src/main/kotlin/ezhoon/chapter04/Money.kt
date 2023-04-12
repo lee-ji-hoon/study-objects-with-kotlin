@@ -13,7 +13,7 @@ data class Money(
         return Money(this.amount.subtract(other.amount))
     }
 
-    fun times(percent: Double): Money {
+    operator fun times(percent: Double): Money {
         return Money(this.amount.multiply(BigDecimal(percent)))
     }
 
