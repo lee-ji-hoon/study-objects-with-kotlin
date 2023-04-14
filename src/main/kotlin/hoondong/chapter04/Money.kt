@@ -12,6 +12,10 @@ data class Money(val amount: BigDecimal) {
         return Money(this.amount - amount.amount)
     }
 
+    fun times(percent: Int): Money {
+        return Money(this.amount.multiply(BigDecimal.valueOf(percent.toDouble())))
+    }
+
     fun times(percent: Double): Money {
         return Money(this.amount.multiply(BigDecimal.valueOf(percent)))
     }
