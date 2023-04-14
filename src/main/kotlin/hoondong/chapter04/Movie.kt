@@ -45,8 +45,11 @@ class Movie(
     }
 
     fun isDiscountable(whenScreened: LocalDateTime, sequence: Int): Boolean {
-        return discountConditions.any {
-            it.isDiscountable(whenScreened.dayOfWeek, whenScreened.toLocalTime())
-        } || discountConditions.any { it.isDiscountable(sequence) }
+        return discountConditions.filter {
+            it.type == DiscountConditionType.PERIOD
+        }.any {
+            (it.isDiscountable(whenScreened.dayOfWeek, whenScreened.toLocalTime()))
+                    || it.isDiscountable(sequence)
+        }
     }
 }
