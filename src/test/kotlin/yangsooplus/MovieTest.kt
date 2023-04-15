@@ -1,3 +1,5 @@
+package yangsooplus
+
 import yangsooplus.ch02.Customer
 import yangsooplus.ch02.Money
 import yangsooplus.ch02.Movie
