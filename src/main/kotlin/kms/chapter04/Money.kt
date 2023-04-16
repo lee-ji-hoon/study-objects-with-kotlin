@@ -2,7 +2,7 @@ package kms.chapter04
 
 import java.math.BigDecimal
 
-internal class Money(
+class Money(
     private val amount: BigDecimal,
 ) : Comparable<Money> {
     operator fun plus(amount: Money): Money {
@@ -15,6 +15,10 @@ internal class Money(
 
     operator fun times(percent: Double): Money {
         return Money(this.amount.multiply(BigDecimal.valueOf(percent)))
+    }
+
+    operator fun times(value: Int): Money {
+        return Money(this.amount.multiply(BigDecimal.valueOf(value.toLong())))
     }
 
     override fun compareTo(other: Money): Int {

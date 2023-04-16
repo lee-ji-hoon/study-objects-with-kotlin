@@ -7,20 +7,11 @@ class ReservationAgency {
         customer: Customer,
         audienceCount: Int,
     ): Reservation {
-        val movie = screening.movie
-        val discountable = movie.discountConditions.any {
-            it.isDiscountable(screening)
-        }
-        val fee = if (discountable) {
-            val discountAmount = when (movie.movieType) {
-                MovieType.AMOUNT_DISCOUNT -> movie.discountAmount
-                MovieType.PERCENT_DISCOUNT -> movie.fee * movie.discountPercent
-                MovieType.NONE_DISCOUNT -> Money.ZERO
-            }
-            movie.fee - discountAmount
-        } else {
-            movie.fee
-        }
-        return Reservation(customer, screening, fee, audienceCount)
+        return Reservation(
+            customer,
+            screening,
+            screening.calculateFee(audienceCount),
+            audienceCount,
+        )
     }
 }
