@@ -2,6 +2,7 @@ package yangsooplus.ch05
 
 import yangsooplus.ch02.Money
 import yangsooplus.ch04.MovieType
+import yangsooplus.ch05.discountcondition.DiscountCondition
 import java.time.Duration
 
 class Movie(
