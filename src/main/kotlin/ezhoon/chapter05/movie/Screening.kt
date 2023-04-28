@@ -7,7 +7,7 @@ import java.time.LocalDateTime
 class Screening(
     val movie: Movie,
     val sequence: Int,
-    private val whenScreened: LocalDateTime
+    val whenScreened: LocalDateTime
 ) {
     fun reserve(
         customer: Customer,

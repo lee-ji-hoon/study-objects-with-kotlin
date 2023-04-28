@@ -17,7 +17,7 @@ data class Movie(
         return if (isDiscountable(screening)) fee.minus(calculateDiscountAmount()) else fee
     }
 
-    private fun isDiscountable(screening: Screening): Boolean = discountConditions.any { it.isDiscountable(screening.sequence) }
+    private fun isDiscountable(screening: Screening): Boolean = discountConditions.any { it.isDisCountable(screening) }
 
     private fun calculateDiscountAmount(): Money {
         return when(movieType) {
@@ -29,7 +29,7 @@ data class Movie(
 
     private fun calculateAmountDiscountAmount(): Money = discountAmount
 
-    private fun calculatePercentDiscountAmount(): Money = fee.times(discountPercent)
+    private fun calculatePercentDiscountAmount(): Money = fee.times(discountPercent.toInt())
 
     private fun calculateNoneDiscountAmount(): Money = Money.ZERO
 
