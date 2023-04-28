@@ -3,6 +3,7 @@ package yangsooplus.ch05
 import yangsooplus.ch02.Money
 import yangsooplus.ch04.Reservation
 import yangsooplus.ch04.Customer
+import yangsooplus.ch05.movie.Movie
 import java.time.LocalDateTime
 
 class Screening(
