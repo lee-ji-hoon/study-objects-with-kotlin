@@ -4,33 +4,18 @@ import ezhoon.chapter05.Money
 import ezhoon.chapter05.discount.DiscountCondition
 import java.time.Duration
 
-data class Movie(
-    val title: String,
-    val runningTime: Duration,
-    val fee: Money,
-    val discountConditions: List<DiscountCondition>,
-    val movieType: MovieType,
-    val discountAmount: Money,
-    val discountPercent: Double
-) {
+interface Movie{
+
+    val title: String
+    val runningTime: Duration
+    val fee: Money
+    val discountConditions: List<DiscountCondition>
+
     fun calculateMovieFee(screening: Screening): Money {
         return if (isDiscountable(screening)) fee.minus(calculateDiscountAmount()) else fee
     }
 
     private fun isDiscountable(screening: Screening): Boolean = discountConditions.any { it.isDisCountable(screening) }
 
-    private fun calculateDiscountAmount(): Money {
-        return when(movieType) {
-            MovieType.AmountDiscount -> calculateAmountDiscountAmount()
-            MovieType.PercentDiscount -> calculatePercentDiscountAmount()
-            MovieType.NoneDiscount -> calculateNoneDiscountAmount()
-        }
-    }
-
-    private fun calculateAmountDiscountAmount(): Money = discountAmount
-
-    private fun calculatePercentDiscountAmount(): Money = fee.times(discountPercent.toInt())
-
-    private fun calculateNoneDiscountAmount(): Money = Money.ZERO
-
+    fun calculateDiscountAmount(): Money
 }
