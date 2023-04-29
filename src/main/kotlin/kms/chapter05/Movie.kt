@@ -3,8 +3,8 @@ package kms.chapter05
 import java.time.Duration
 
 abstract class Movie(
-    private val title: String,
-    private val runningTime: Duration,
+    val title: String,
+    val runningTime: Duration,
     protected val fee: Money,
     private val discountConditions: List<DiscountCondition>,
 ) {

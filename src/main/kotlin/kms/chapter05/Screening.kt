@@ -3,7 +3,7 @@ package kms.chapter05
 import java.time.LocalDateTime
 
 data class Screening(
-    private val movie: Movie,
+    val movie: Movie,
     val sequence: Int,
     val whenScreened: LocalDateTime,
 ) {
