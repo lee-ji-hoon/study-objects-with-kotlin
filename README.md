@@ -33,7 +33,7 @@
 | 제3장 | 역할, 책임, 협력                  |  4/16  | [Issues #13](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/13) |
 | 제4장 | 설계 품질과 트레이드오프             |  4/16  | [Issues #17](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/17) |
 | 제5장 | 책임 할당하기                      |  4/29 | [Issues #17](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/22) |
-| 제6장 | 메시지와 인터페이스                 |      |      |
+| 제6장 | 메시지와 인터페이스                 |   5/7 |  [Issues #17](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/27) |
 | 제7장 | 객체 분해                            |      |      |
 | 제8장 | 의존성 관리하기                      |      |      |
 | 제9장 | 유연한 설계                          |      |      |
