@@ -13,5 +13,4 @@ class NoneDiscountMovie(
     override fun calculateDiscountAmount(): Money {
         return Money.ZERO
     }
-} {
 }
