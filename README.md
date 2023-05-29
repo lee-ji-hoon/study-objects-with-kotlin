@@ -35,7 +35,7 @@
 | 제5장 | 책임 할당하기                      |  4/29 | [Issues #22](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/22) |
 | 제6장 | 메시지와 인터페이스                 |  5/07 |  [Issues #27](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/27) |
 | 제7장 | 객체 분해                         | 5/22 | [Issues #32](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/32)     |
-| 제8장 | 의존성 관리하기                      |      |      |
+| 제8장 | 의존성 관리하기                      |  5/29    | [Issues #42](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/42)   |
 | 제9장 | 유연한 설계                          |      |      |
 | 제10장| 상속과 코드 재사용                  |      |      |
 | 제11장| 합성과 유연한 객체 설계             |      |      |
