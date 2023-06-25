@@ -2,7 +2,7 @@ package kms.chapter02
 
 import java.math.BigDecimal
 
-internal class Money(
+class Money(
     private val amount: BigDecimal,
 ) : Comparable<Money> {
     operator fun plus(amount: Money): Money {
