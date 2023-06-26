@@ -37,7 +37,7 @@
 | 제7장 | 객체 분해                         | 5/22 | [Issues #32](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/32)     |
 | 제8장 | 의존성 관리하기                      |  5/29    | [Issues #37](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/37)   |
 | 제9장 | 유연한 설계                          | 6/12   | [Issues #42](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/42)     |
-| 제10장| 상속과 코드 재사용                  |      |      |
+| 제10장| 상속과 코드 재사용                  |  6/26    |  [Issues #47](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/47)    |
 | 제11장| 합성과 유연한 객체 설계             |      |      |
 | 제12장| 다형성                               |      |      |
 | 제13장| 서브클래싱과 서브타이핑              |      |      |
