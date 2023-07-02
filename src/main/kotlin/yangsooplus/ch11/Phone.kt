@@ -14,4 +14,8 @@ abstract class Phone {
     }
 
     protected abstract fun calculateCallFee(call: Call): Money
+    open fun afterCalculated(fee: Money): Money {
+        return fee
+    }
+
 }

@@ -12,4 +12,5 @@ open class RegularPhone(
     override fun calculateCallFee(call: Call): Money {
         return amount.times((call.duration.seconds / seconds.seconds).toDouble())
     }
+
 }
