@@ -38,7 +38,7 @@
 | 제8장 | 의존성 관리하기                      |  5/29    | [Issues #37](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/37)   |
 | 제9장 | 유연한 설계                          | 6/12   | [Issues #42](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/42)     |
 | 제10장| 상속과 코드 재사용                  |  6/26    |  [Issues #47](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/47)    |
-| 제11장| 합성과 유연한 객체 설계             |   7/2   | [Issues #53](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/47)     |
+| 제11장| 합성과 유연한 객체 설계             |   7/02   | [Issues #53](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/47)     |
 | 제12장| 다형성                               |      |      |
 | 제13장| 서브클래싱과 서브타이핑              |      |      |
 | 제14장| 일관성 있는 협력                     |      |      |
