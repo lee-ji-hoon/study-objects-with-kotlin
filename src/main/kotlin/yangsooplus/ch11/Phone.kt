@@ -1,21 +1,13 @@
 package yangsooplus.ch11
 
 import yangsooplus.ch02.Money
+import yangsooplus.ch11.policy.RatePolicy
 
-abstract class Phone {
-    private val calls: List<Call> = emptyList()
+abstract class Phone(private val ratePolicy: RatePolicy) {
+    val calls: List<Call> = emptyList()
 
-    open fun calculateFee(): Money {
-        var result = Money.ZERO
-        calls.forEach {
-            result = result.plus(calculateCallFee(it))
-        }
-        return result
-    }
-
-    protected abstract fun calculateCallFee(call: Call): Money
-    open fun afterCalculated(fee: Money): Money {
-        return fee
+    fun calculateFee(): Money {
+        return ratePolicy.calculateFee(this)
     }
 
 }
