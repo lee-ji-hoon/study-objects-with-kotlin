@@ -38,13 +38,9 @@
 | 제8장 | 의존성 관리하기                      |  5/29    | [Issues #37](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/37)   |
 | 제9장 | 유연한 설계                          | 6/12   | [Issues #42](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/42)     |
 | 제10장| 상속과 코드 재사용                  |  6/26    |  [Issues #47](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/47)    |
-| 제11장| 합성과 유연한 객체 설계             |      |      |
+| 제11장| 합성과 유연한 객체 설계             |   7/2   | [Issues #53](https://github.com/lee-ji-hoon/study-objects-with-kotlin/issues/47)     |
 | 제12장| 다형성                               |      |      |
 | 제13장| 서브클래싱과 서브타이핑              |      |      |
 | 제14장| 일관성 있는 협력                     |      |      |
 | 제15장| 디자인 패턴과 프레임워크             |      |      |
 | 제16장| 올바른 설계로 가는 10가지 길목       |      |      |
-| 부록A| 도메인 모델 패턴                      |      |      |
-| 부록B| HTTP API 설계                        |      |      |
-| 부록C| 객체지향 설계와 소프트웨어 아키텍처   |      |      |
-| 부록D| OCP 원칙과 역할-책임-협력 모델       |      |      |
